@@ -64,7 +64,7 @@ create table matricula (
 	codigo char(6) primary key,
     fecha date,
     estado varchar(15),
-    alumno char(9),
+    alumno char(9) unique,
     curso int,
     constraint chk_estado check (estado in ('Pendiente', 'Aceptada')),
 	constraint fk_matricula_alumno foreign key (alumno) references alumno(dni_alumno),
@@ -82,8 +82,16 @@ create table pertenece (
 create table ra (
 	codigo char(6) primary key,
     descripcion text,
-    mod_prof char(6),
+    mod_prof char(6) not null,
     constraint fk_re_modulo foreign key (mod_prof) references modulo_prof(codigo)
+);
+
+create table criterio_evalua (
+	codigo char(6) primary key,
+    nombre varchar(80),
+    descripcion text,
+    ra char(6),
+    constraint fk_criterio_ra foreign key (ra) references ra(codigo)
 );
 
 create table tarea (
@@ -94,28 +102,16 @@ create table tarea (
     constraint fk_tarea_alumno foreign key (alumno) references alumno(dni_alumno)
 );
 
-create table realiza (
-	dni_alumno char(9),
-    codigo_tarea char(6),
+create table evaluacion(
+	id int primary key auto_increment,
+    fecha date,
     nota int,
-    constraint chk_nota check (nota > 0 and nota < 10),
-    constraint pk_realiza primary key (dni_alumno, codigo_tarea, nota),
-    constraint fk_realiza_alumno foreign key (dni_alumno) references alumno(dni_alumno),
-	constraint fk_realiza_tarea foreign key (codigo_tarea) references tarea(codigo)
-);
-
-create table criterio_evalua (
-	codigo char(6) primary key,
-    nombre varchar(80),
-    descripcion text
-);
-
-create table se_evalua (
-	codigo_tarea char(6),
-    codigo_criterio char(6),
-    constraint pk_se_evalua primary key (codigo_tarea, codigo_criterio),
-    constraint fk_evalua_tarea foreign key (codigo_tarea) references tarea(codigo),
-    constraint fk_evalua_criterio foreign key (codigo_criterio) references criterio_evalua(codigo)
+    alumno char(9),
+    tarea char(6),
+    criterio char(6),
+    constraint fk_evaluacion_alumno foreign key (alumno) references alumno(dni_alumno),
+    constraint fk_evaluacion_tarea foreign key (tarea) references tarea(codigo),
+    constraint fk_evaluacion_criterio foreign key (criterio) references criterio_evalua(codigo)
 );
 
 create table instrumento_evaluacion (
