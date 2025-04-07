@@ -18,8 +18,7 @@ create table alumno (
     num_lista int,
     sexo char(1),
     faltas_asistencia int,
-    persona char(9),
-    constraint fk_alumno_persona foreign key (persona) references persona(dni),
+    constraint fk_alumno_persona foreign key (dni_alumno) references persona(dni),
     constraint chk_alumno check (sexo in ('H','M'))
 );
 
@@ -28,8 +27,7 @@ create table profesor (
     especialidad varchar(80),
     departamento varchar(80),
     salario decimal(6,2),
-    persona char(9),
-    constraint fk_profesor_persona foreign key (persona) references persona(dni),
+    constraint fk_profesor_persona foreign key (dni_profesor) references persona(dni),
 	constraint chk_profesor check (salario > 0)
 );
 
@@ -67,7 +65,7 @@ create table matricula (
     alumno char(9) unique,
     curso int,
     constraint chk_estado check (estado in ('Pendiente', 'Aceptada')),
-	constraint fk_matricula_alumno foreign key (alumno) references alumno(dni_alumno),
+	constraint fk_matricula_alumno foreign key (alumno) references alumno(dni_alumno) ON DELETE CASCADE,
     constraint fk_matricula_curso foreign key (curso) references curso(id)
 );
 

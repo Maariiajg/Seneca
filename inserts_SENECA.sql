@@ -32,30 +32,42 @@ INSERT INTO persona (dni, nombre, apellidos, telefono, direccion, email, fecha_n
 ('31313131D', 'Rocío', 'Gálvez León', '699012765', 'Plaza del Pilar 14, Zaragoza', 'rocio.galvez@example.com', '2002-01-19');
 
 -- Insertar más alumnos
-INSERT INTO alumno (dni_alumno, num_lista, sexo, faltas_asistencia, persona) VALUES
-('11111111A', 3, 'H', 1, '11111111A'),  -- También profesor
-('22222222B', 4, 'M', 0, '22222222B'), 
-('33333333C', 5, 'H', 3, '33333333C'), 
-('44444444D', 6, 'M', 2, '44444444D'), 
-('55555555E', 7, 'H', 5, '55555555E'),  -- También profesor
-('66666666F', 8, 'M', 4, '66666666F'), 
-('77777777G', 9, 'H', 0, '77777777G'), 
-('88888888H', 10, 'M', 1, '88888888H'), 
-('99999999I', 11, 'H', 2, '99999999I'), 
-('10101010J', 12, 'M', 0, '10101010J');
+INSERT INTO alumno (dni_alumno, num_lista, sexo, faltas_asistencia) VALUES
+('12121212K', 13, 'H', 2),
+('13131313L', 14, 'M', 0),
+('14141414M', 15, 'H', 1),
+('15151515N', 16, 'M', 3),
+('16161616O', 17, 'H', 0),
+('17171717P', 18, 'M', 1),
+('18181818Q', 19, 'H', 4),
+('19191919R', 20, 'M', 0),
+('20202020S', 21, 'H', 3),
+('21212121T', 22, 'M', 2),
+('22222222U', 23, 'H', 1),
+('23232323V', 24, 'M', 0),
+('24242424W', 25, 'H', 2),
+('25252525X', 26, 'M', 4),
+('26262626Y', 27, 'H', 0),
+('27272727Z', 28, 'M', 3),
+('28282828A', 29, 'H', 1),
+('29292929B', 30, 'M', 0),
+('30303030C', 31, 'H', 2),
+('31313131D', 32, 'M', 1);
+
+
 
 -- Insertar más profesores
-INSERT INTO profesor (dni_profesor, especialidad, departamento, salario, persona) VALUES
-('11111111A', 'Desarrollo Web', 'Informática', 2600.00, '11111111A'), -- También alumno
-('55555555E', 'Programación', 'Informática', 2500.00, '55555555E'), -- También alumno
-('12121212K', 'Redes y Seguridad', 'Sistemas', 2400.50, '12121212K'),  
-('13131313L', 'Sistemas Operativos', 'Sistemas', 2300.75, '13131313L'),  
-('14141414M', 'Bases de Datos', 'Informática', 2200.00, '14141414M'),  
-('15151515N', 'Diseño Web', 'Informática', 2100.50, '15151515N'),  
-('16161616O', 'Inteligencia Artificial', 'Investigación', 2800.00, '16161616O'),  
-('17171717P', 'Ciberseguridad', 'Seguridad', 3000.00, '17171717P'),  
-('18181818Q', 'Big Data', 'Investigación', 2750.00, '18181818Q'),  
-('19191919R', 'Desarrollo de Aplicaciones Móviles', 'Informática', 2650.00, '19191919R');
+INSERT INTO profesor (dni_profesor, especialidad, departamento, salario) VALUES
+('11111111A', 'Desarrollo Web', 'Informática', 2600.00), 
+('55555555E', 'Programación', 'Informática', 2500.00),    
+('12121212K', 'Redes y Seguridad', 'Sistemas', 2400.50),  
+('13131313L', 'Sistemas Operativos', 'Sistemas', 2300.75),  
+('14141414M', 'Bases de Datos', 'Informática', 2200.00),  
+('15151515N', 'Diseño Web', 'Informática', 2100.50),  
+('16161616O', 'Inteligencia Artificial', 'Investigación', 2800.00),  
+('17171717P', 'Ciberseguridad', 'Seguridad', 3000.00),  
+('18181818Q', 'Big Data', 'Investigación', 2750.00),  
+('19191919R', 'Desarrollo de Aplicaciones Móviles', 'Informática', 2650.00);
 
 
 INSERT INTO ciclo (codigo, nombre) VALUES
@@ -69,18 +81,18 @@ INSERT INTO ciclo (codigo, nombre) VALUES
 INSERT INTO curso (nivel, num_max_alum, fecha_inicio, fecha_fin, centro, ciclo) VALUES
 (1, 30, '2024-09-15', '2025-06-20', 'IES Séneca', 'DAW01'),
 (2, 25, '2025-09-15', '2026-06-20', 'IES Séneca', 'DAW01'),
-(1, 28, '2024-09-10', '2025-06-15', 'IES Innovatech', 'DAW01'),
+(1, 28, '2024-09-10', '2025-06-15', 'IES Los Alcores', 'DAW01'),
 (2, 32, '2025-09-12', '2026-06-18', 'IES Innovatech', 'DAW01'),
 (1, 30, '2024-09-20', '2025-06-22', 'CIFP Digital', 'DAW01'),
 (1, 35, '2024-09-18', '2025-06-25', 'CIFP Digital', 'DAM01'),
 (2, 30, '2025-09-18', '2026-06-25', 'CIFP Digital', 'DAM01'),
 (1, 40, '2024-09-15', '2025-06-20', 'IES TechFuture', 'ASIR1'),
-(2, 38, '2025-09-15', '2026-06-20', 'IES TechFuture', 'ASIR1'),
+(2, 38, '2025-09-15', '2026-06-20', 'IES Los Alcores', 'ASIR1'),
 (1, 30, '2024-09-12', '2025-06-18', 'IES CyberSecurity', 'CIB01'),
 (1, 20, '2024-09-10', '2025-06-15', 'IES BigDataHub', 'BIG01'),
 (1, 25, '2024-09-22', '2025-06-27', 'IES AI Future', 'BIG01'),
 (1, 30, '2024-09-17', '2025-06-22', 'IES VideoGame World', 'DAW01'),
-(1, 30, '2024-09-19', '2025-06-23', 'IES IoT Academy', 'DAW01'),
+(1, 30, '2024-09-19', '2025-06-23', 'IES Los Alcores', 'DAW01'),
 (1, 25, '2024-09-21', '2025-06-24', 'CIFP Digital', 'DAW01'),
 (2, 28, '2025-09-21', '2026-06-24', 'CIFP Digital', 'DAW01'),
 (1, 30, '2024-09-14', '2025-06-19', 'IES Innovatech', 'ASIR1'),
@@ -103,64 +115,69 @@ INSERT INTO modulo_prof (codigo, nombre, num_horas, profesor) VALUES
 ('DWES12', 'Proyecto de Desarrollo de Aplicaciones Web', 50, '18181818Q'), 
 ('DWES13', 'Formación en Centros de Trabajo (FCT)', 370, NULL); -- No tiene profesor asignado porque se realiza en empresas
 
--- FUNCIONA HASTA AQUI
 
+-- Insertar matrículas solo para alumnos existentes en la tabla alumno
+-- Insertar matrículas solo para alumnos existentes en la tabla alumno
 INSERT INTO matricula (codigo, fecha, estado, alumno, curso) VALUES
-('MAT001', '2024-07-01', 'Aceptada', '11111111A', 1),  
-('MAT002', '2024-07-02', 'Aceptada', '22222222B', 2),  
-('MAT003', '2024-07-03', 'Aceptada', '33333333C', 1),  
-('MAT004', '2024-07-04', 'Aceptada', '44444444D', 3),  
-('MAT005', '2024-07-05', 'Aceptada', '55555555E', 1),  
-('MAT006', '2024-07-06', 'Aceptada', '66666666F', 5),  
-('MAT007', '2024-07-07', 'Aceptada', '77777777G', 1),  
-('MAT008', '2024-07-08', 'Aceptada', '88888888H', 4),  
-('MAT009', '2024-07-09', 'Aceptada', '99999999I', 1),  
-('MAT010', '2024-07-10', 'Aceptada', '10101010J', 6),  
-('MAT011', '2024-07-11', 'Pendiente', '22222222B', 4),  
-('MAT012', '2024-07-12', 'Pendiente', '33333333C', 3),  
-('MAT013', '2024-07-13', 'Pendiente', '44444444D', 7),  
-('MAT014', '2024-07-14', 'Pendiente', '77777777G', 1),  
-('MAT015', '2024-07-15', 'Pendiente', '10101010J', 9);
+('MAT011', '2024-07-11', 'Aceptada', '12121212K', 2),
+('MAT012', '2024-07-12', 'Aceptada', '13131313L', 3),
+('MAT013', '2024-07-13', 'Aceptada', '14141414M', 1),
+('MAT014', '2024-07-14', 'Aceptada', '15151515N', 4),
+('MAT015', '2024-07-15', 'Pendiente', '16161616O', 5),
+('MAT016', '2024-07-16', 'Aceptada', '17171717P', 6),
+('MAT017', '2024-07-17', 'Aceptada', '18181818Q', 1),
+('MAT018', '2024-07-18', 'Aceptada', '19191919R', 2),
+('MAT019', '2024-07-19', 'Pendiente', '20202020S', 3),
+('MAT020', '2024-07-20', 'Aceptada', '21212121T', 4),
+('MAT021', '2024-07-21', 'Aceptada', '22222222U', 1),
+('MAT022', '2024-07-22', 'Aceptada', '23232323V', 2),
+('MAT023', '2024-07-23', 'Pendiente', '24242424W', 3),
+('MAT024', '2024-07-24', 'Aceptada', '25252525X', 4),
+('MAT025', '2024-07-25', 'Aceptada', '26262626Y', 5),
+('MAT026', '2024-07-26', 'Pendiente', '27272727Z', 6),
+('MAT027', '2024-07-27', 'Aceptada', '28282828A', 1),
+('MAT028', '2024-07-28', 'Aceptada', '29292929B', 2),
+('MAT029', '2024-07-29', 'Aceptada', '30303030C', 3),
+('MAT030', '2024-07-30', 'Aceptada', '31313131D', 4);
 
 
 
-
-
-
+-- Insertar registros en la tabla pertenece asegurando que los códigos existen
 INSERT INTO pertenece (codigo_modulo, codigo_matricula) VALUES
 -- Sistemas Informáticos
-('DWES01', 'MAT001'), ('DWES01', 'MAT002'), ('DWES01', 'MAT003'), ('DWES01', 'MAT004'), 
-('DWES01', 'MAT005'), ('DWES01', 'MAT006'), ('DWES01', 'MAT007'), ('DWES01', 'MAT008'), 
-('DWES01', 'MAT009'), ('DWES01', 'MAT010'),
+('DWES01', 'MAT011'), ('DWES01', 'MAT012'), ('DWES01', 'MAT013'), ('DWES01', 'MAT014'), 
+('DWES01', 'MAT015'), ('DWES01', 'MAT016'), ('DWES01', 'MAT017'), ('DWES01', 'MAT018'), 
+('DWES01', 'MAT019'), ('DWES01', 'MAT020'),
 
 -- Bases de Datos
-('DWES02', 'MAT001'), ('DWES02', 'MAT002'), ('DWES02', 'MAT003'), ('DWES02', 'MAT004'), 
-('DWES02', 'MAT005'), ('DWES02', 'MAT006'), ('DWES02', 'MAT007'), ('DWES02', 'MAT008'), 
-('DWES02', 'MAT009'), ('DWES02', 'MAT010'),
+('DWES02', 'MAT011'), ('DWES02', 'MAT012'), ('DWES02', 'MAT013'), ('DWES02', 'MAT014'), 
+('DWES02', 'MAT015'), ('DWES02', 'MAT016'), ('DWES02', 'MAT017'), ('DWES02', 'MAT018'), 
+('DWES02', 'MAT019'), ('DWES02', 'MAT020'),
 
 -- Programación
-('DWES03', 'MAT001'), ('DWES03', 'MAT002'), ('DWES03', 'MAT003'), ('DWES03', 'MAT004'), 
-('DWES03', 'MAT005'), ('DWES03', 'MAT006'), ('DWES03', 'MAT007'), ('DWES03', 'MAT008'), 
-('DWES03', 'MAT009'), ('DWES03', 'MAT010'),
+('DWES03', 'MAT011'), ('DWES03', 'MAT012'), ('DWES03', 'MAT013'), ('DWES03', 'MAT014'), 
+('DWES03', 'MAT015'), ('DWES03', 'MAT016'), ('DWES03', 'MAT017'), ('DWES03', 'MAT018'), 
+('DWES03', 'MAT019'), ('DWES03', 'MAT020'),
 
 -- Lenguajes de Marcas
-('DWES04', 'MAT001'), ('DWES04', 'MAT002'), ('DWES04', 'MAT003'), ('DWES04', 'MAT004'), 
-('DWES04', 'MAT005'), ('DWES04', 'MAT006'), ('DWES04', 'MAT007'), ('DWES04', 'MAT008'), 
-('DWES04', 'MAT009'), ('DWES04', 'MAT010'),
+('DWES04', 'MAT011'), ('DWES04', 'MAT012'), ('DWES04', 'MAT013'), ('DWES04', 'MAT014'), 
+('DWES04', 'MAT015'), ('DWES04', 'MAT016'), ('DWES04', 'MAT017'), ('DWES04', 'MAT018'), 
+('DWES04', 'MAT019'), ('DWES04', 'MAT020'),
 
 -- Entornos de Desarrollo
-('DWES05', 'MAT001'), ('DWES05', 'MAT002'), ('DWES05', 'MAT003'), ('DWES05', 'MAT004'), 
-('DWES05', 'MAT005'), ('DWES05', 'MAT006'), ('DWES05', 'MAT007'), ('DWES05', 'MAT008'), 
-('DWES05', 'MAT009'), ('DWES05', 'MAT010'),
+('DWES05', 'MAT011'), ('DWES05', 'MAT012'), ('DWES05', 'MAT013'), ('DWES05', 'MAT014'), 
+('DWES05', 'MAT015'), ('DWES05', 'MAT016'), ('DWES05', 'MAT017'), ('DWES05', 'MAT018'), 
+('DWES05', 'MAT019'), ('DWES05', 'MAT020'),
 
 -- Formación y Orientación Laboral (FOL)
-('DWES06', 'MAT001'), ('DWES06', 'MAT002'), ('DWES06', 'MAT003'), ('DWES06', 'MAT004'), 
-('DWES06', 'MAT005'), ('DWES06', 'MAT006'), ('DWES06', 'MAT007'), ('DWES06', 'MAT008'), 
-('DWES06', 'MAT009'), ('DWES06', 'MAT010');
+('DWES06', 'MAT011'), ('DWES06', 'MAT012'), ('DWES06', 'MAT013'), ('DWES06', 'MAT014'), 
+('DWES06', 'MAT015'), ('DWES06', 'MAT016'), ('DWES06', 'MAT017'), ('DWES06', 'MAT018'), 
+('DWES06', 'MAT019'), ('DWES06', 'MAT020');
+
 
 INSERT INTO ra (codigo, descripcion, mod_prof) VALUES
 -- RA para Sistemas Informáticos
-('RA001', 'Identifica los componentes de un sistema informático y su funcionamiento.', 'DWES01'),
+('RA001', 'Identifica los componentes de un sistema informático y su funcionamiento.', 'DWES02'),
 ('RA002', 'Instala y configura sistemas operativos y software de gestión.', 'DWES01'),
 ('RA003', 'Administra redes y protocolos de comunicación.', 'DWES01'),
 
@@ -275,110 +292,109 @@ INSERT INTO criterio_evalua (codigo, nombre, descripcion, ra) VALUES
 
 INSERT INTO tarea (codigo, nombre, fecha, alumno) VALUES
 -- Tareas para Sistemas Informáticos (DWES01)
-('T001', 'Instalación de sistema operativo', '2024-09-10', '11111111A'),
-('T002', 'Configuración de red local', '2024-09-15', '22222222B'),
-('T003', 'Montaje de PC y componentes', '2024-09-20', '33333333C'),
-('T004', 'Creación de una máquina virtual', '2024-09-25', '44444444D'),
+('T001', 'Instalación de sistema operativo', '2024-09-10', '12121212K'),
+('T002', 'Configuración de red local', '2024-09-15', '13131313L'),
+('T003', 'Montaje de PC y componentes', '2024-09-20', '14141414M'),
+('T004', 'Creación de una máquina virtual', '2024-09-25', '15151515N'),
 
 -- Tareas para Bases de Datos (DWES02)
-('T005', 'Modelado de base de datos en MySQL', '2024-10-05', '55555555E'),
-('T006', 'Creación de consultas SQL avanzadas', '2024-10-10', '66666666F'),
-('T007', 'Gestión de usuarios y permisos en PostgreSQL', '2024-10-15', '77777777G'),
+('T005', 'Modelado de base de datos en MySQL', '2024-10-05', '16161616O'),
+('T006', 'Creación de consultas SQL avanzadas', '2024-10-10', '17171717P'),
+('T007', 'Gestión de usuarios y permisos en PostgreSQL', '2024-10-15', '18181818Q'),
 
 -- Tareas para Programación (DWES03)
-('T008', 'Implementación de estructuras de control en Java', '2024-11-01', '88888888H'),
-('T009', 'Desarrollo de una clase en Python con OOP', '2024-11-05', '99999999I'),
-('T010', 'Optimización de código en C#', '2024-11-10', '10101010J'),
+('T008', 'Implementación de estructuras de control en Java', '2024-11-01', '19191919R'),
+('T009', 'Desarrollo de una clase en Python con OOP', '2024-11-05', '20202020S'),
+('T010', 'Optimización de código en C#', '2024-11-10', '21212121T'),
 
 -- Tareas para Lenguajes de Marcas (DWES04)
-('T011', 'Creación de una página web con HTML y CSS', '2024-12-01', '11111111A'),
-('T012', 'Uso de XML y JSON en intercambio de datos', '2024-12-05', '22222222B'),
+('T011', 'Creación de una página web con HTML y CSS', '2024-12-01', '22222222U'),
+('T012', 'Uso de XML y JSON en intercambio de datos', '2024-12-05', '23232323V'),
 
 -- Tareas para Entornos de Desarrollo (DWES05)
-('T013', 'Configuración de Git y GitHub', '2024-12-15', '33333333C'),
-('T014', 'Uso de un IDE para depuración de código', '2024-12-20', '44444444D'),
+('T013', 'Configuración de Git y GitHub', '2024-12-15', '24242424W'),
+('T014', 'Uso de un IDE para depuración de código', '2024-12-20', '25252525X'),
 
 -- Tareas para Desarrollo Web en Cliente (DWES07)
-('T015', 'Creación de una calculadora en JavaScript', '2025-01-10', '55555555E'),
-('T016', 'Uso del DOM para modificar contenido dinámicamente', '2025-01-15', '66666666F'),
+('T015', 'Creación de una calculadora en JavaScript', '2025-01-10', '26262626Y'),
+('T016', 'Uso del DOM para modificar contenido dinámicamente', '2025-01-15', '27272727Z'),
 
 -- Tareas para Desarrollo Web en Servidor (DWES08)
-('T017', 'Desarrollo de una API REST con Node.js', '2025-02-01', '77777777G'),
-('T018', 'Gestión de sesiones y autenticación con PHP', '2025-02-05', '88888888H'),
+('T017', 'Desarrollo de una API REST con Node.js', '2025-02-01', '28282828A'),
+('T018', 'Gestión de sesiones y autenticación con PHP', '2025-02-05', '29292929B'),
 
 -- Tareas para Despliegue de Aplicaciones (DWES09)
-('T019', 'Despliegue de aplicación web en un servidor Linux', '2025-03-01', '99999999I'),
-('T020', 'Automatización del despliegue con Docker', '2025-03-05', '10101010J'),
+('T019', 'Despliegue de aplicación web en un servidor Linux', '2025-03-01', '30303030C'),
+('T020', 'Automatización del despliegue con Docker', '2025-03-05', '31313131D'),
 
 -- Tareas para Diseño de Interfaces Web (DWES10)
-('T021', 'Diseño de una interfaz responsiva con Bootstrap', '2025-03-15', '11111111A'),
-('T022', 'Creación de prototipo en Figma', '2025-03-20', '22222222B'),
+('T021', 'Diseño de una interfaz responsiva con Bootstrap', '2025-03-15', '12121212K'),
+('T022', 'Creación de prototipo en Figma', '2025-03-20', '13131313L'),
 
 -- Tareas para Empresa e Iniciativa Emprendedora (DWES11)
-('T023', 'Análisis de oportunidades de negocio en el sector IT', '2025-04-01', '33333333C'),
-('T024', 'Elaboración de un plan de empresa', '2025-04-05', '44444444D'),
+('T023', 'Análisis de oportunidades de negocio en el sector IT', '2025-04-01', '14141414M'),
+('T024', 'Elaboración de un plan de empresa', '2025-04-05', '15151515N'),
 
 -- Tareas para Proyecto DAW (DWES12)
-('T025', 'Planificación del proyecto final con Scrum', '2025-05-01', '55555555E'),
-('T026', 'Desarrollo del backend del proyecto', '2025-05-10', '66666666F'),
-('T027', 'Presentación y documentación del proyecto', '2025-05-20', '77777777G');
+('T025', 'Planificación del proyecto final con Scrum', '2025-05-01', '16161616O'),
+('T026', 'Desarrollo del backend del proyecto', '2025-05-10', '17171717P'),
+('T027', 'Presentación y documentación del proyecto', '2025-05-20', '18181818Q');
 
 
-
-INSERT INTO evaluacion (id, fecha, nota, alumno, tarea, criterio) VALUES
+INSERT INTO evaluacion (fecha, nota, alumno, tarea, criterio) VALUES
 -- Evaluaciones para Sistemas Informáticos (DWES01)
-(1, '2024-09-12', 8, '11111111A', 'T001', 'CE001'),
-(2, '2024-09-17', 7, '22222222B', 'T002', 'CE002'),
-(3, '2024-09-22', 9, '33333333C', 'T003', 'CE003'),
-(4, '2024-09-27', 6, '44444444D', 'T004', 'CE001'),
+('2024-09-12', 8, '12121212K', 'T001', 'CE001'),
+('2024-09-17', 4, '13131313L', 'T002', 'CE002'),
+('2024-09-22', 9, '14141414M', 'T003', 'CE003'),
+('2024-09-27', 6, '15151515N', 'T004', 'CE001'),
 
 -- Evaluaciones para Bases de Datos (DWES02)
-(5, '2024-10-07', 8, '55555555E', 'T005', 'CE004'),
-(6, '2024-10-12', 9, '66666666F', 'T006', 'CE005'),
-(7, '2024-10-17', 7, '77777777G', 'T007', 'CE006'),
+('2024-10-07', 8, '16161616O', 'T005', 'CE004'),
+('2024-10-12', 9, '17171717P', 'T006', 'CE005'),
+('2024-10-17', 2, '18181818Q', 'T007', 'CE006'),
 
 -- Evaluaciones para Programación (DWES03)
-(8, '2024-11-03', 9, '88888888H', 'T008', 'CE007'),
-(9, '2024-11-07', 8, '99999999I', 'T009', 'CE008'),
-(10, '2024-11-12', 7, '10101010J', 'T010', 'CE009'),
+('2024-11-03', 1, '19191919R', 'T008', 'CE007'),
+('2024-11-07', 8, '20202020S', 'T009', 'CE008'),
+('2024-11-12', 7, '21212121T', 'T010', 'CE009'),
 
 -- Evaluaciones para Lenguajes de Marcas (DWES04)
-(11, '2024-12-03', 8, '11111111A', 'T011', 'CE010'),
-(12, '2024-12-07', 7, '22222222B', 'T012', 'CE011'),
+('2024-12-03', 8, '22222222U', 'T011', 'CE010'),
+('2024-12-07', 7, '23232323V', 'T012', 'CE011'),
 
 -- Evaluaciones para Entornos de Desarrollo (DWES05)
-(13, '2024-12-17', 9, '33333333C', 'T013', 'CE013'),
-(14, '2024-12-22', 6, '44444444D', 'T014', 'CE014'),
+('2024-12-17', 9, '24242424W', 'T013', 'CE013'),
+('2024-12-22', 6, '25252525X', 'T014', 'CE014'),
 
 -- Evaluaciones para Desarrollo Web en Cliente (DWES07)
-(15, '2025-01-12', 8, '55555555E', 'T015', 'CE016'),
-(16, '2025-01-17', 9, '66666666F', 'T016', 'CE017'),
+('2025-01-12', 5, '26262626Y', 'T015', 'CE016'),
+('2025-01-17', 9, '27272727Z', 'T016', 'CE017'),
 
 -- Evaluaciones para Desarrollo Web en Servidor (DWES08)
-(17, '2025-02-03', 7, '77777777G', 'T017', 'CE019'),
-(18, '2025-02-07', 8, '88888888H', 'T018', 'CE020'),
+('2025-02-03', 7, '28282828A', 'T017', 'CE019'),
+('2025-02-07', 6, '29292929B', 'T018', 'CE020'),
 
 -- Evaluaciones para Despliegue de Aplicaciones (DWES09)
-(19, '2025-03-03', 9, '99999999I', 'T019', 'CE022'),
-(20, '2025-03-07', 6, '10101010J', 'T020', 'CE023'),
+('2025-03-03', 9, '30303030C', 'T019', 'CE022'),
+('2025-03-07', 3, '31313131D', 'T020', 'CE023'),
 
 -- Evaluaciones para Diseño de Interfaces Web (DWES10)
-(21, '2025-03-17', 8, '11111111A', 'T021', 'CE025'),
-(22, '2025-03-22', 7, '22222222B', 'T022', 'CE026'),
+('2025-03-17', 8, '12121212K', 'T021', 'CE025'),
+('2025-03-22', 7, '13131313L', 'T022', 'CE026'),
 
 -- Evaluaciones para Empresa e Iniciativa Emprendedora (DWES11)
-(23, '2025-04-03', 9, '33333333C', 'T023', 'CE028'),
-(24, '2025-04-07', 6, '44444444D', 'T024', 'CE029'),
+('2025-04-03', 9, '14141414M', 'T023', 'CE028'),
+('2025-04-07', 6, '15151515N', 'T024', 'CE029'),
 
 -- Evaluaciones para Proyecto DAW (DWES12)
-(25, '2025-05-03', 9, '55555555E', 'T025', 'CE031'),
-(26, '2025-05-12', 8, '66666666F', 'T026', 'CE032'),
-(27, '2025-05-22', 7, '77777777G', 'T027', 'CE033');
+('2025-05-03', 9, '16161616O', 'T025', 'CE031'),
+('2025-05-12', 8, '17171717P', 'T026', 'CE032'),
+('2025-05-22', 7, '18181818Q', 'T027', 'CE033');
 
 
 
 INSERT INTO instrumento_evaluacion (codigo, descripcion, tipo, tarea) VALUES
--- Instrumentos para Sistemas Informáticos
+-- Instrumentos para Sistemas Informático
 ('IE001', 'Informe sobre la instalación de un sistema operativo.', 'Practica', 'T001'),
 ('IE002', 'Prueba de configuración de una red local.', 'Practica', 'T002'),
 ('IE003', 'Examen sobre montaje de PC y hardware.', 'Examen', 'T003'),
@@ -426,3 +442,4 @@ INSERT INTO instrumento_evaluacion (codigo, descripcion, tipo, tarea) VALUES
 ('IE025', 'Planificación del proyecto con metodología Scrum.', 'Practica', 'T025'),
 ('IE026', 'Entrega del código y documentación del backend.', 'Proyecto', 'T026'),
 ('IE027', 'Defensa del proyecto final y evaluación.', 'Examen', 'T027');
+
