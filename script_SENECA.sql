@@ -50,7 +50,8 @@ create table curso (
 );
 
 create table modulo_prof (
-	codigo char(6) primary key,
+	id int primary key auto_increment,
+	codigo char(6),
     nombre varchar(70),
     num_horas int,
     profesor char(9),
@@ -70,34 +71,34 @@ create table matricula (
 );
 
 create table pertenece (
-	codigo_modulo char(6),
+	id_modulo int,
     codigo_matricula char(6),
-    constraint pk_pertenece primary key (codigo_modulo, codigo_matricula),
-    constraint fk_pertenece_modulo foreign key (codigo_modulo) references modulo_prof(codigo),
+    constraint pk_pertenece primary key (id_modulo, codigo_matricula),
+    constraint fk_pertenece_modulo foreign key (id_modulo) references modulo_prof(id),
     constraint fk_pertenece_matricula foreign key (codigo_matricula) references matricula(codigo)
 );
 
 create table ra (
-	codigo char(6) primary key,
+	id int primary key auto_increment,
+	codigo char(6),
     descripcion text,
-    mod_prof char(6) not null,
-    constraint fk_re_modulo foreign key (mod_prof) references modulo_prof(codigo)
+    mod_prof int not null,
+    constraint fk_re_modulo foreign key (mod_prof) references modulo_prof(id)
 );
 
 create table criterio_evalua (
-	codigo char(6) primary key,
-    nombre varchar(80),
+	id int primary key auto_increment,
+	codigo char(1),
     descripcion text,
-    ra char(6),
-    constraint fk_criterio_ra foreign key (ra) references ra(codigo)
+    porcentaje decimal(5,2),
+    ra int,
+    constraint fk_criterio_ra foreign key (ra) references ra(id)
 );
 
 create table tarea (
 	codigo char(6) primary key,
     nombre varchar(80),
-    fecha date,
-    alumno char(9),
-    constraint fk_tarea_alumno foreign key (alumno) references alumno(dni_alumno)
+    fecha date
 );
 
 create table evaluacion(
@@ -106,10 +107,10 @@ create table evaluacion(
     nota int,
     alumno char(9),
     tarea char(6),
-    criterio char(6),
+    criterio int,
     constraint fk_evaluacion_alumno foreign key (alumno) references alumno(dni_alumno),
     constraint fk_evaluacion_tarea foreign key (tarea) references tarea(codigo),
-    constraint fk_evaluacion_criterio foreign key (criterio) references criterio_evalua(codigo)
+    constraint fk_evaluacion_criterio foreign key (criterio) references criterio_evalua(id)
 );
 
 create table instrumento_evaluacion (
