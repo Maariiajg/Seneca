@@ -308,402 +308,307 @@ INSERT INTO ra (codigo, descripcion, mod_prof) VALUES
 
 INSERT INTO criterio_evalua (codigo, descripcion, porcentaje, ra) VALUES
 -- CE para Sistemas Informáticos
-('A', 'Se han reconocido los componentes físicos de un sistema informático y sus mecanismos de interconexión.', 20.0, 1),
-('B', 'Se han clasificado los tipos de memorias, señalando sus características e identificando sus prestaciones y la función que desarrollan en el conjunto del sistema.', 20.0, 1),
-('C', 'Se ha verificado el proceso de puesta en marcha de un equipo.', 60.0, 1),
+('A', 'Se han reconocido los componentes físicos de un sistema informático y sus mecanismos de interconexión.', 50.0, 1),
+('B', 'Se han clasificado los tipos de memorias, señalando sus características e identificando sus prestaciones y la función que desarrollan en el conjunto del sistema.', 50.0, 1),
 
-('A', 'Se han identificado los elementos funcionales de un sistema informático.', 20.0, 2),
-('B', 'Se han analizado las características, funciones y arquitectura de un sistema operativo.', 20.0, 2),
-('C', 'Se han comparado sistemas operativos en base a sus requisitos, características, campos de aplicación y licencias de uso.', 60.0, 2),
+('A', 'Se han identificado los elementos funcionales de un sistema informático.', 50.0, 2),
+('B', 'Se han analizado las características, funciones y arquitectura de un sistema operativo.', 50.0, 2),
 
-('A', 'Se han comparado sistemas de archivos.', 20.0, 3),
-('B', 'Se ha identificado la estructura y función de los directorios del sistema operativo.', 20.0, 3),
-('C', 'Se han utilizado herramientas en entorno gráfico y comandos para localizar información en el sistema de archivos.', 60.0, 3),
+('A', 'Se han comparado sistemas de archivos.', 50.0, 3),
+('B', 'Se ha identificado la estructura y función de los directorios del sistema operativo.', 50.0, 3),
 
-('A', 'Se han configurado cuentas de usuario locales y grupos.', 20.0, 4),
-('B', 'Se ha asegurado el acceso al sistema mediante el uso de directivas de cuenta y directivas de contraseñas.', 20.0, 4),
-('C', 'Se han identificado, arrancado y detenido servicios y procesos.', 60.0, 4),
+('A', 'Se han configurado cuentas de usuario locales y grupos.', 50.0, 4),
+('B', 'Se ha asegurado el acceso al sistema mediante el uso de directivas de cuenta y directivas de contraseñas.', 50.0, 4),
 
-('A', 'Se ha configurado el protocolo TCP/IP.', 20.0, 5),
-('B', 'Se han configurado redes de área local cableadas.', 20.0, 5),
-('C', 'Se han configurado redes de área local inalámbricas.', 60.0, 5),
+('A', 'Se ha configurado el protocolo TCP/IP.', 50.0, 5),
+('B', 'Se han configurado redes de área local cableadas.', 50.0, 5),
 
-('A', 'Se ha configurado el acceso a recursos locales y recursos de red.', 20.0, 6),
-('B', 'Se han identificado y configurado los derechos de usuario y directivas de seguridad.', 20.0, 6),
-('C', 'Se han explotado servidores de ficheros, servidores de impresión y servidores de aplicaciones.', 60.0, 6),
+('A', 'Se ha configurado el acceso a recursos locales y recursos de red.', 50.0, 6),
+('B', 'Se han identificado y configurado los derechos de usuario y directivas de seguridad.', 50.0, 6),
 
-('A', 'Se ha clasificado software en función de su licencia y propósito.', 20.0, 7),
-('B', 'Se han analizado las necesidades específicas de software asociadas al uso de sistemas informáticos en diferentes entornos productivos.', 20.0, 7),
-('C', 'Se han realizado tareas de documentación mediante el uso de herramientas ofimáticas y de trabajo colaborativo.', 60.0, 7),
+('A', 'Se ha clasificado software en función de su licencia y propósito.', 50.0, 7),
+('B', 'Se han analizado las necesidades específicas de software asociadas al uso de sistemas informáticos en diferentes entornos productivos.', 50.0, 7),
 
 
 -- CE para Bases de Datos
-('A', 'Se han analizado los sistemas lógicos de almacenamiento y sus características.', 20, 8),
-('B', 'Se han identificado los distintos tipos de bases de datos según el modelo de datos utilizado.', 20, 8),
-('C', 'Se han identificado los distintos tipos de bases de datos en función de la ubicación de la información.', 60, 8),
+('A', 'Se han analizado los sistemas lógicos de almacenamiento y sus características.', 50.0, 8),
+('B', 'Se han identificado los distintos tipos de bases de datos según el modelo de datos utilizado.', 50.0, 8),
 
-('A', 'Se ha analizado el formato de almacenamiento de la información.', 20, 9),
-('B', 'Se han creado las tablas y las relaciones entre ellas.', 20, 9),
-('C', 'Se han seleccionado los tipos de datos adecuados.', 60, 9),
+('A', 'Se ha analizado el formato de almacenamiento de la información.', 50.0, 9),
+('B', 'Se han creado las tablas y las relaciones entre ellas.', 50.0, 9),
 
-('A', 'Se han identificado las herramientas y sentencias para realizar consultas.', 20, 10),
-('B', 'Se han realizado consultas simples sobre una tabla.', 20, 10),
-('C', 'Se han realizado consultas sobre el contenido de varias tablas mediante composiciones internas.', 60, 10),
+('A', 'Se han identificado las herramientas y sentencias para realizar consultas.', 50.0, 10),
+('B', 'Se han realizado consultas simples sobre una tabla.', 50.0, 10),
+('C', 'Se han realizado consultas sobre el contenido de varias tablas mediante composiciones internas.', 60.0, 10),
 
-('A', 'Se han identificado las herramientas y sentencias para modificar el contenido de la base de datos.', 20, 11),
-('B', 'Se han insertado, borrado y actualizado datos en las tablas.', 20, 11),
-('C', 'Se ha incluido en una tabla la información resultante de la ejecución de una consulta.', 60, 11),
+('A', 'Se han identificado las herramientas y sentencias para modificar el contenido de la base de datos.', 50.0, 11),
+('B', 'Se han insertado, borrado y actualizado datos en las tablas.', 50.0, 11),
 
-('A', 'Se han identificado las diversas formas de automatizar tareas.', 20, 12),
-('B', 'Se han reconocido los métodos de ejecución de guiones.', 20, 12),
-('C', 'Se han identificado las herramientas disponibles para editar guiones.', 60, 12),
+('A', 'Se han identificado las diversas formas de automatizar tareas.', 50.0, 12),
+('B', 'Se han reconocido los métodos de ejecución de guiones.', 50.0, 12),
 
-('A', 'Se han utilizado herramientas gráficas para representar el diseño lógico.', 20, 13),
-('B', 'Se han identificado las tablas del diseño lógico.', 20, 13),
-('C', 'Se han identificado los campos que forman parte de las tablas del diseño lógico.', 60, 13),
+('A', 'Se han utilizado herramientas gráficas para representar el diseño lógico.', 50.0, 13),
+('B', 'Se han identificado las tablas del diseño lógico.', 50.0, 13),
 
-('A', 'Se han caracterizado las bases de datos no relacionales.', 20, 14),
-('B', 'Se han evaluado los principales tipos de bases de datos no relacionales.', 20, 14),
-('C', 'Se han identificado los elementos utilizados en estas bases de datos.', 60, 14),
+('A', 'Se han caracterizado las bases de datos no relacionales.', 50.0, 14),
+('B', 'Se han evaluado los principales tipos de bases de datos no relacionales.', 50.0, 14),
 
 
 -- CE para Programación
-('A', 'Se han identificado los bloques que componen la estructura de un programa informático.', 20, 15),
-('B', 'Se han creado proyectos de desarrollo de aplicaciones.', 20, 15),
-('C', 'Se han utilizado entornos integrados de desarrollo.', 60, 15),
+('A', 'Se han identificado los bloques que componen la estructura de un programa informático.', 50.0, 15),
+('B', 'Se han creado proyectos de desarrollo de aplicaciones.', 50.0, 15),
 
-('A', 'Se han identificado los fundamentos de la programación orientada a objetos.', 20, 16),
-('B', 'Se han escrito programas simples.', 20, 16),
-('C', 'Se han instanciado objetos a partir de clases predefinidas.', 60, 16),
+('A', 'Se han identificado los fundamentos de la programación orientada a objetos.', 50.0, 16),
+('B', 'Se han escrito programas simples.', 50.0, 16),
 
-('A', 'Se ha escrito y probado código que haga uso de estructuras de selección.', 20, 17),
-('B', 'Se han utilizado estructuras de repetición.', 20, 17),
-('C', 'Se han reconocido las posibilidades de las sentencias de salto.', 60, 17),
+('A', 'Se ha escrito y probado código que haga uso de estructuras de selección.', 50.0, 17),
+('B', 'Se han utilizado estructuras de repetición.', 50.0, 17),
 
-('A', 'Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.', 20, 18),
-('B', 'Se han definido clases.', 20, 18),
-('C', 'Se han definido propiedades y métodos.', 60, 18),
+('A', 'Se ha reconocido la sintaxis, estructura y componentes típicos de una clase.', 50.0, 18),
+('B', 'Se han definido clases.', 50.0, 18),
 
-('A', 'Se ha utilizado la consola para realizar operaciones de entrada y salida de información.', 20, 19),
-('B', 'Se han aplicado formatos en la visualización de la información.', 20, 19),
-('C', 'Se han reconocido las posibilidades de entrada / salida del lenguaje y las librerías asociadas.', 60, 19),
+('A', 'Se ha utilizado la consola para realizar operaciones de entrada y salida de información.', 50.0, 19),
+('B', 'Se han aplicado formatos en la visualización de la información.', 50.0, 19),
 
-('A', 'Se han escrito programas que utilicen matrices (arrays).', 20, 20),
-('B', 'Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.', 20, 20),
-('C', 'Se han utilizado listas para almacenar y procesar información.', 60, 20),
+('A', 'Se han escrito programas que utilicen matrices (arrays).', 50.0, 20),
+('B', 'Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.', 50.0, 20),
 
-('A', 'Se han identificado los conceptos de herencia, superclase y subclase.', 20, 21),
-('B', 'Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.', 20, 21),
-('C', 'Se ha reconocido la incidencia de los constructores en la herencia.', 60, 21),
+('A', 'Se han identificado los conceptos de herencia, superclase y subclase.', 50.0, 21),
+('B', 'Se han utilizado modificadores para bloquear y forzar la herencia de clases y métodos.', 50.0, 21),
 
-('A', 'Se han identificado las características de las bases de datos orientadas a objetos.', 20, 22),
-('B', 'Se ha analizado su aplicación en el desarrollo de aplicaciones mediante lenguajes orientados a objetos.', 20, 22),
-('C', 'Se han instalado sistemas gestores de bases de datos orientados a objetos.', 60, 22),
+('A', 'Se han identificado las características de las bases de datos orientadas a objetos.', 50.0, 22),
+('B', 'Se ha analizado su aplicación en el desarrollo de aplicaciones mediante lenguajes orientados a objetos.', 50.0, 22),
 
-('A', 'Se han identificado las características y métodos de acceso a sistemas gestores de bases de datos.', 20, 23),
-('B', 'Se han programado conexiones con bases de datos.', 20, 23),
-('C', 'Se ha escrito un código para almacenar información en bases de datos.', 60, 23),
+('A', 'Se han identificado las características y métodos de acceso a sistemas gestores de bases de datos.', 50.0, 23),
+('B', 'Se han programado conexiones con bases de datos.', 50.0, 23),
+
 
 -- CE para Lenguajes de Marcas y Sistemas de Gestión de Información
-('A', 'Se han identificado las características generales de los lenguajes de marcas.', 20, 24),
-('B', 'Se han reconocido las ventajas que proporcionan en el tratamiento de la información.', 20, 24),
-('C', 'Se han clasificado los lenguajes de marcas e identificado los más relevantes.', 60, 24),
+('A', 'Se han identificado las características generales de los lenguajes de marcas.', 50.0, 24),
+('B', 'Se han reconocido las ventajas que proporcionan en el tratamiento de la información.', 50.0, 24),
 
-('A', 'Se han identificado y clasificado los lenguajes de marcas relacionados con la web y sus diferentes versiones y estándares.', 20, 25),
-('B', 'Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.', 20, 25),
-('C', 'Se ha reconocido la funcionalidad de las principales etiquetas y los atributos del lenguaje HTML.', 60, 25),
+('A', 'Se han identificado y clasificado los lenguajes de marcas relacionados con la web y sus diferentes versiones y estándares.', 50.0, 25),
+('B', 'Se ha analizado la estructura de un documento HTML e identificado las secciones que lo componen.', 50.0, 25),
 
-('A', 'Se han identificado y clasificado los lenguajes de script de cliente relacionados con la web y sus diferentes versiones y estándares.', 20, 26),
-('B', 'Se ha identificado la sintaxis básica de los lenguajes de script de cliente.', 20, 26),
-('C', 'Se han utilizado métodos para la selección y acceso de los diferentes elementos de un documento web.', 60, 26),
+('A', 'Se han identificado y clasificado los lenguajes de script de cliente relacionados con la web y sus diferentes versiones y estándares.', 50.0, 26),
+('B', 'Se ha identificado la sintaxis básica de los lenguajes de script de cliente.', 50.0, 26),
 
-('A', 'Se ha establecido la necesidad de describir la información transmitida en los documentos y sus reglas.', 20, 27),
-('B', 'Se han identificado las tecnologías relacionadas con la definición de documentos.', 20, 27),
-('C', 'Se ha analizado la estructura y sintaxis específica utilizada en la descripción.', 60, 27),
+('A', 'Se ha establecido la necesidad de describir la información transmitida en los documentos y sus reglas.', 50.0, 27),
+('B', 'Se han identificado las tecnologías relacionadas con la definición de documentos.', 50.0, 27),
 
-('A', 'Se ha identificado la necesidad de la conversión de documentos para el intercambio de la información.', 20, 28),
-('B', 'Se han establecido ámbitos de aplicación.', 20, 28),
-('C', 'Se han analizado las tecnologías implicadas y su modo de funcionamiento.', 60, 28),
+('A', 'Se ha identificado la necesidad de la conversión de documentos para el intercambio de la información.', 50.0, 28),
+('B', 'Se han establecido ámbitos de aplicación.', 50.0, 28),
 
-('A', 'Se han identificado los principales métodos de almacenamiento de la información utilizados en documentos de intercambio de datos.', 20, 29),
-('B', 'Se han identificado las ventajas e inconvenientes de almacenar información en formatos de intercambio de datos.', 20, 29),
-('C', 'Se han establecido tecnologías eficientes de almacenamiento de información en función de sus características.', 60, 29),
+('A', 'Se han identificado los principales métodos de almacenamiento de la información utilizados en documentos de intercambio de datos.', 50.0, 29),
+('B', 'Se han identificado las ventajas e inconvenientes de almacenar información en formatos de intercambio de datos.', 50.0, 29),
 
-('A', 'Se han identificado los principales sistemas de gestión empresarial.', 20, 30),
-('B', 'Se han reconocido las ventajas de los sistemas de gestión de información empresariales.', 20, 30),
-('C', 'Se han evaluado las características de las principales aplicaciones de gestión empresarial.', 60, 30),
+('A', 'Se han identificado los principales sistemas de gestión empresarial.', 50.0, 30),
+('B', 'Se han reconocido las ventajas de los sistemas de gestión de información empresariales.', 50.0, 30),
 
 -- CE para Entorno de Desarrollo
-('A', 'Se ha reconocido la relación de los programas con los componentes del sistema informático: memoria, procesador, periféricos, entre otros.',20, 31),
-('B', 'Se han identificado las fases de desarrollo de una aplicación informática.',20, 31),
-('C', 'Se han diferenciado los conceptos de código fuente, objeto y ejecutable.',60, 31),
+('A', 'Se ha reconocido la relación de los programas con los componentes del sistema informático: memoria, procesador, periféricos, entre otros.', 50.0, 31),
+('B', 'Se han identificado las fases de desarrollo de una aplicación informática.', 50.0, 31),
 
-('A', 'Se han instalado entornos de desarrollo, propietarios y libres.',20, 32),
-('B', 'Se han añadido y eliminado módulos en el entorno de desarrollo.',20, 32),
-('C', 'Se ha personalizado y automatizado el entorno de desarrollo.',60, 32),
+('A', 'Se han instalado entornos de desarrollo, propietarios y libres.', 50.0, 32),
+('B', 'Se han añadido y eliminado módulos en el entorno de desarrollo.', 50.0, 32),
 
-('A', 'Se han identificado los diferentes tipos de pruebas.',20, 33),
-('B', 'Se han definido casos de prueba.',20, 33),
-('C', 'Se han identificado las herramientas de depuración y prueba de aplicaciones ofrecidas por el entorno de desarrollo.',60, 33),
+('A', 'Se han identificado los diferentes tipos de pruebas.', 50.0, 33),
+('B', 'Se han definido casos de prueba.', 50.0, 33),
 
-('A', 'Se han identificado los patrones de refactorización más usuales.',20, 34),
-('B', 'Se han elaborado las pruebas asociadas a la refactorización.',20, 34),
-('C', 'Se ha revisado el código fuente usando un analizador de código..',60, 34),
+('A', 'Se han identificado los patrones de refactorización más usuales.', 50.0, 34),
+('B', 'Se han elaborado las pruebas asociadas a la refactorización.', 50.0, 34),
 
-('A', 'Se han identificado los conceptos básicos de la programación orientada a objetos.',20, 35),
-('B', ' Se han utilizado herramientas para la elaboración de diagramas de clases.',20, 35),
-('C', 'Se ha interpretado el significado de diagramas de clases.',60, 35),
+('A', 'Se han identificado los conceptos básicos de la programación orientada a objetos.', 50.0, 35),
+('B', ' Se han utilizado herramientas para la elaboración de diagramas de clases.', 50.0, 35),
 
-('A', 'Se han identificado los distintos tipos de diagramas de comportamiento.',20, 36),
-('B', 'Se ha reconocido el significado de los diagramas de casos de uso.',20, 36),
-('C', 'Se han interpretado diagramas de interacción.',60, 36),
+('A', 'Se han identificado los distintos tipos de diagramas de comportamiento.', 50.0, 36),
+('B', 'Se ha reconocido el significado de los diagramas de casos de uso.', 50.0, 36),
 
 -- CE para Desarrollo de interfaces
-('A', ' Se han analizado las herramientas y librerías disponibles para la generación de interfaces gráficos.', 20, 37),
-('B', 'Se ha creado un interfaz gráfico utilizando las herramientas de un editor visual.', 20, 37),
-('C', 'Se han utilizado las funciones del editor para ubicar los componentes del .', 60, 37),
+('A', ' Se han analizado las herramientas y librerías disponibles para la generación de interfaces gráficos.', 50.0, 37),
+('B', 'Se ha creado un interfaz gráfico utilizando las herramientas de un editor visual.', 50.0, 37),
 
-('A', 'Se han identificado las herramientas disponibles para el aprendizaje automático relacionadas con las interfaces de usuario.', 20, 38),
-('B', 'Se ha creado una interfaz natural de usuario utilizando las herramientas disponibles.', 20, 38),
-('C', 'Se ha utilizado el reconocimiento de voz para implementar acciones en las interfaces naturales de usuario.', 60, 38),
+('A', 'Se han identificado las herramientas disponibles para el aprendizaje automático relacionadas con las interfaces de usuario.', 50.0, 38),
+('B', 'Se ha creado una interfaz natural de usuario utilizando las herramientas disponibles.', 50.0, 38),
 
-('A', 'Se han identificado las herramientas para diseño y prueba de componentes.', 20, 39),
-('B', 'Se han creado componentes visuales.', 20, 39),
-('C', 'Se han definido sus métodos y propiedades con asignación de valores por defecto.', 60, 39),
+('A', 'Se han identificado las herramientas para diseño y prueba de componentes.', 50.0, 39),
+('B', 'Se han creado componentes visuales.', 50.0, 39),
 
-('A', 'Se han identificado los principales estándares de usabilidad y accesibilidad.', 20, 40),
-('B', 'Se ha valorado la importancia del uso de estándares para la creación de interfaces.', 20, 40),
-('C', 'Se han creado diferentes tipos de menús cuya estructura y contenido siguen los estándares establecidos.', 60, 40),
+('A', 'Se han identificado los principales estándares de usabilidad y accesibilidad.', 50.0, 40),
+('B', 'Se ha valorado la importancia del uso de estándares para la creación de interfaces.', 50.0, 40),
 
-('A', 'Se ha establecido la estructura del informe.', 20, 41),
-('B', 'Se han generado informes básicos a partir de diferentes fuentes de datos mediante asistentes.', 20, 41),
-('C', 'Se han establecido filtros sobre los valores a presentar en los informes.', 60, 41),
+('A', 'Se ha establecido la estructura del informe.', 50.0, 41),
+('B', 'Se han generado informes básicos a partir de diferentes fuentes de datos mediante asistentes.', 50.0, 41),
 
-('A', 'Se han identificado sistemas de generación de ayudas.', 20, 41),
-('B', 'Se han generado ayudas en los formatos habituales.', 20, 41),
-('C', 'Se han generado ayudas sensibles al contexto.', 60, 41),
+('A', 'Se han identificado sistemas de generación de ayudas.', 50.0, 41),
+('B', 'Se han generado ayudas en los formatos habituales.', 50.0, 41),
 
-('A', 'Se han empaquetado los componentes que requiere la aplicación.', 20, 41),
-('B', 'Se ha personalizado el asistente de instalación.', 20, 41),
-('C', 'Se han generado paquetes de instalación utilizando el entorno de desarrollo.', 60, 41),
+('A', 'Se han empaquetado los componentes que requiere la aplicación.', 50.0, 41),
+('B', 'Se ha personalizado el asistente de instalación.', 50.0, 41),
 
-('A', 'Se ha establecido una estrategia de pruebas.', 20, 41),
-('B', 'Se han realizado pruebas de integración de los distintos elementos.', 20, 41),
-('C', 'Se han realizado pruebas de regresión.', 60, 41),
+('A', 'Se ha establecido una estrategia de pruebas.', 50.0, 41),
+('B', 'Se han realizado pruebas de integración de los distintos elementos.', 50.0, 41),
 
 -- CE de Desarrollo web cliente
-('A', 'Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente web.', 20, 42),
-('B', 'Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores web.', 20, 42),
-('C', 'Se han identificado y caracterizado los principales lenguajes relacionados con la programación de clientes web.', 60, 42),
+('A', 'Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente web.', 50.0, 42),
+('B', 'Se han identificado las capacidades y mecanismos de ejecución de código de los navegadores web.', 50.0, 42),
 
-('A', 'Se ha seleccionado un lenguaje de programación de clientes web en función de sus posibilidades.', 20, 43),
-('B', 'Se han utilizado los distintos tipos de variables y operadores disponibles en el lenguaje.', 20, 43),
-('C', 'Se han identificado los ámbitos de utilización de las variables.', 60, 43),
+('A', 'Se ha seleccionado un lenguaje de programación de clientes web en función de sus posibilidades.', 50.0, 43),
+('B', 'Se han utilizado los distintos tipos de variables y operadores disponibles en el lenguaje.', 50.0, 43),
 
-('A', 'Se han identificado los objetos predefinidos del lenguaje.', 20, 44),
-('B', 'Se han analizado los objetos referentes a las ventanas del navegador y los documentos web que contienen.', 20, 44),
-('C', 'Se han escrito sentencias que utilicen los objetos predefinidos del lenguaje para cambiar el aspecto del navegador y el documento que contiene.', 60, 44),
+('A', 'Se han identificado los objetos predefinidos del lenguaje.', 50.0, 44),
+('B', 'Se han analizado los objetos referentes a las ventanas del navegador y los documentos web que contienen.', 50.0, 44),
 
-('A', 'Se han clasificado y utilizado las funciones predefinidas del lenguaje.', 20, 45),
-('B', 'Se han creado y utilizado funciones definidas por el usuario.', 20, 45),
-('C', 'Se han reconocido las características del lenguaje relativas a la creación y uso de matrices (arrays).', 60, 45),
+('A', 'Se han clasificado y utilizado las funciones predefinidas del lenguaje.', 50.0, 45),
+('B', 'Se han creado y utilizado funciones definidas por el usuario.', 50.0, 45),
 
-('A', 'Se han reconocido las posibilidades del lenguaje de marcas relativas a la captura de los eventos producidos.', 20, 46),
-('B', 'Se han identificado las características del lenguaje de programación relativas a la gestión de los eventos.', 20, 46),
-('C', 'Se han diferenciado los tipos de eventos que se pueden manejar.', 60, 46),
+('A', 'Se han reconocido las posibilidades del lenguaje de marcas relativas a la captura de los eventos producidos.', 50.0, 46),
+('B', 'Se han identificado las características del lenguaje de programación relativas a la gestión de los eventos.', 50.0, 46),
 
-('A', 'Se ha reconocido el modelo de objetos del documento de una página web.', 20, 47),
-('B', 'Se han identificado los objetos del modelo, sus propiedades y métodos.', 20, 47),
-('C', 'Se ha creado y verificado un código que acceda a la estructura del documento.', 60, 47),
+('A', 'Se ha reconocido el modelo de objetos del documento de una página web.', 50.0, 47),
+('B', 'Se han identificado los objetos del modelo, sus propiedades y métodos.', 50.0, 47),
 
-('A', 'Se han evaluado las ventajas e inconvenientes de utilizar mecanismos de comunicación asíncrona entre cliente y servidor web.', 20, 48),
-('B', 'Se han analizado los mecanismos disponibles para el establecimiento de la comunicación asíncrona.', 20, 48),
-('C', 'Se han utilizado los objetos relacionados.', 60, 48),
+('A', 'Se han evaluado las ventajas e inconvenientes de utilizar mecanismos de comunicación asíncrona entre cliente y servidor web.', 50.0, 48),
+('B', 'Se han analizado los mecanismos disponibles para el establecimiento de la comunicación asíncrona.', 50.0, 48),
 
 -- CE Desarrollo web en entorno servidor
-('A', 'Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente web.', 20, 49),
-('B', 'Se han reconocido las ventajas que proporciona la generación dinámica de páginas.', 20, 49),
-('C', 'Se han identificado los mecanismos de ejecución de código en los servidores web.', 60, 49),
+('A', 'Se han caracterizado y diferenciado los modelos de ejecución de código en el servidor y en el cliente web.', 50.0, 49),
+('B', 'Se han reconocido las ventajas que proporciona la generación dinámica de páginas.', 50.0, 49),
 
-('A', 'Se han reconocido los mecanismos de generación de páginas web a partir de lenguajes de marcas con código embebido.', 20, 50),
-('B', 'Se han identificado las principales tecnologías asociadas.', 20, 50),
-('C', 'Se han utilizado etiquetas para la inclusión de código en el lenguaje de marcas.', 60, 50),
+('A', 'Se han reconocido los mecanismos de generación de páginas web a partir de lenguajes de marcas con código embebido.', 50.0, 50),
+('B', 'Se han identificado las principales tecnologías asociadas.', 50.0, 50),
 
-('A', 'Se han utilizado mecanismos de decisión en la creación de bloques de sentencias.', 20, 51),
-('B', 'Se han utilizado bucles y se ha verificado su funcionamiento.', 20, 51),
-('C', 'Se han utilizado matrices (arrays) para almacenar y recuperar conjuntos de datos.', 60, 51),
+('A', 'Se han utilizado mecanismos de decisión en la creación de bloques de sentencias.', 50.0, 51),
+('B', 'Se han utilizado bucles y se ha verificado su funcionamiento.', 50.0, 51),
 
-('A', 'Se han identificado los mecanismos disponibles para el mantenimiento de la información que concierne a un cliente web concreto y se han señalado sus ventajas.', 20, 52),
-('B', 'Se han utilizado mecanismos para mantener el estado de las aplicaciones web.', 20, 52),
-('C', 'Se han utilizado mecanismos para almacenar información en el cliente web y para recuperar su contenido.', 60, 52),
+('A', 'Se han identificado los mecanismos disponibles para el mantenimiento de la información que concierne a un cliente web concreto y se han señalado sus ventajas.', 50.0, 52),
+('B', 'Se han utilizado mecanismos para mantener el estado de las aplicaciones web.', 50.0, 52),
 
-('A', 'Se han identificado las ventajas de separar la lógica de negocio de los aspectos de presentación de la aplicación.', 20, 53),
-('B', 'Se han analizado y utilizado mecanismos y frameworks que permiten realizar esta separación y sus características principales.', 20, 53),
-('C', 'Se han utilizado objetos y controles en el servidor para generar el aspecto visual de la aplicación web en el cliente.', 60, 53),
+('A', 'Se han identificado las ventajas de separar la lógica de negocio de los aspectos de presentación de la aplicación.', 50.0, 53),
+('B', 'Se han analizado y utilizado mecanismos y frameworks que permiten realizar esta separación y sus características principales.', 50.0, 53),
 
-('A', 'Se han analizado las tecnologías que permiten el acceso mediante programación a la información disponible en almacenes de datos.', 20, 54),
-('B', 'Se han creado aplicaciones que establezcan conexiones con bases de datos.', 20, 54),
-('C', 'Se ha recuperado información almacenada en bases de datos.', 60, 54),
+('A', 'Se han analizado las tecnologías que permiten el acceso mediante programación a la información disponible en almacenes de datos.', 50.0, 54),
+('B', 'Se han creado aplicaciones que establezcan conexiones con bases de datos.', 50.0, 54),
 
-('A', 'Se han reconocido las características propias y el ámbito de aplicación de los servicios web.', 20, 55),
-('B', 'Se han reconocido las ventajas de utilizar servicios web para proporcionar acceso a funcionalidades incorporadas a la lógica de negocio de una aplicación.', 20, 55),
-('C', 'Se han identificado las tecnologías y los protocolos implicados en el consumo de servicios web.', 60, 55),
+('A', 'Se han reconocido las características propias y el ámbito de aplicación de los servicios web.', 50.0, 55),
+('B', 'Se han reconocido las ventajas de utilizar servicios web para proporcionar acceso a funcionalidades incorporadas a la lógica de negocio de una aplicación.', 50.0, 55),
 
-('A', 'Se han identificado las diferencias entre la ejecución de código en el servidor y en el cliente web.', 20, 56),
-('B', 'Se han reconocido las ventajas de unir ambas tecnologías en el proceso de desarrollo de programas.', 20, 56),
-('C', 'Se han identificado las tecnologías y frameworks relacionadas con la generación por parte del servidor de páginas web con guiones embebidos.', 60, 56),
+('A', 'Se han identificado las diferencias entre la ejecución de código en el servidor y en el cliente web.', 50.0, 56),
+('B', 'Se han reconocido las ventajas de unir ambas tecnologías en el proceso de desarrollo de programas.', 50.0, 56),
 
-('A', 'Se han reconocido las ventajas que proporciona la reutilización de código y el aprovechamiento de información ya existente.', 20, 57),
-('B', 'Se han identificado tecnologías y frameworks aplicables en la creación de aplicaciones web híbridas.', 20, 57),
-('C', 'Se ha creado una aplicación web que recupere y procese repositorios de información ya existentes.', 60, 57),
+('A', 'Se han reconocido las ventajas que proporciona la reutilización de código y el aprovechamiento de información ya existente.', 50.0, 57),
+('B', 'Se han identificado tecnologías y frameworks aplicables en la creación de aplicaciones web híbridas.', 50.0, 57),
 
 -- CE Despliegue de aplicaciones web
-('A', 'Se han analizado aspectos generales de arquitecturas web, sus características, ventajas e inconvenientes.', 20, 58),
-('B', 'Se han descrito los fundamentos y protocolos en los que se basa el funcionamiento de un servidor web.', 20, 58),
-('C', 'Se ha realizado la instalación y configuración básica de servidores web.', 60, 58),
+('A', 'Se han analizado aspectos generales de arquitecturas web, sus características, ventajas e inconvenientes.', 50.0, 58),
+('B', 'Se han descrito los fundamentos y protocolos en los que se basa el funcionamiento de un servidor web.', 50.0, 58),
 
-('A', 'Se han reconocido los parámetros de administración más importantes del servidor web.', 20, 59),
-('B', 'Se ha ampliado la funcionalidad del servidor mediante la activación y configuración de módulos.', 20, 59),
-('C', 'Se han creado y configurado sitios virtuales.', 60, 59),
+('A', 'Se han reconocido los parámetros de administración más importantes del servidor web.', 50.0, 59),
+('B', 'Se ha ampliado la funcionalidad del servidor mediante la activación y configuración de módulos.', 50.0, 59),
 
-('A', 'Se han descrito los componentes y el funcionamiento de los servicios proporcionados por el servidor de aplicaciones.', 20, 60),
-('B', 'Se han identificado los principales archivos de configuración y de bibliotecas compartidas.', 20, 60),
-('C', 'Se ha configurado el servidor de aplicaciones para cooperar con el servidor web.', 60, 60),
+('A', 'Se han descrito los componentes y el funcionamiento de los servicios proporcionados por el servidor de aplicaciones.', 50.0, 60),
+('B', 'Se han identificado los principales archivos de configuración y de bibliotecas compartidas.', 50.0, 60),
 
-('A', 'Se han instalado y configurado servidores de transferencia de archivos.', 20, 61),
-('B', 'Se han creado usuarios y grupos para el acceso remoto al servidor.', 20, 61),
-('C', 'Se ha comprobado el acceso al servidor, tanto en modo activo como en modo pasivo.', 60, 61),
+('A', 'Se han instalado y configurado servidores de transferencia de archivos.', 50.0, 61),
+('B', 'Se han creado usuarios y grupos para el acceso remoto al servidor.', 50.0, 61),
 
-('A', 'Se ha descrito la estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos.', 20, 62),
-('B', 'Se han identificado las necesidades de configuración del servidor de nombres en función de los requerimientos de ejecución de las aplicaciones web desplegadas.', 20, 62),
-('C', 'Se han identificado la función, elementos y estructuras lógicas del servicio de directorio.', 60, 62),
+('A', 'Se ha descrito la estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos.', 50.0, 62),
+('B', 'Se han identificado las necesidades de configuración del servidor de nombres en función de los requerimientos de ejecución de las aplicaciones web desplegadas.', 50.0, 62),
 
-('A', 'Se han identificado diferentes herramientas de generación de documentación.', 20, 63),
-('B', 'Se han documentado los componentes software utilizando los generadores específicos de las plataformas.', 20, 63),
-('C', 'Se han utilizado diferentes formatos para la documentación.', 60, 63),
-
+('A', 'Se han identificado diferentes herramientas de generación de documentación.', 50.0, 63),
+('B', 'Se han documentado los componentes software utilizando los generadores específicos de las plataformas.', 50.0, 63),
 
 -- CE diseño de interfaces web
-('A', 'Se ha reconocido la importancia de la comunicación visual y sus principios básicos.', 20, 64),
-('B', 'Se han analizado y seleccionado los colores y tipografías adecuados para su visualización en pantalla.', 20, 64),
-('C', 'Se han analizado alternativas para la presentación de la información en documentos web.', 60, 64),
+('A', 'Se ha reconocido la importancia de la comunicación visual y sus principios básicos.', 50.0, 64),
+('B', 'Se han analizado y seleccionado los colores y tipografías adecuados para su visualización en pantalla.', 50.0, 64),
 
-('A', 'Se han reconocido las posibilidades de modificar las etiquetas HTML.', 20, 65),
-('B', 'Se han definido estilos de forma directa.', 20, 65),
-('C', 'Se han definido y asociado estilos globales en hojas externas.', 60, 65),
+('A', 'Se han reconocido las posibilidades de modificar las etiquetas HTML.', 50.0, 65),
+('B', 'Se han definido estilos de forma directa.', 50.0, 65),
 
-('A', 'Se han reconocido las implicaciones de las licencias y los derechos de autor en el uso de material multimedia.', 20, 66),
-('B', 'Se han identificado los formatos de imagen, audio y vídeo a utilizar.', 20, 66),
-('C', 'Se han analizado las herramientas disponibles para generar contenido multimedia.', 60, 66),
+('A', 'Se han reconocido las implicaciones de las licencias y los derechos de autor en el uso de material multimedia.', 50.0, 66),
+('B', 'Se han identificado los formatos de imagen, audio y vídeo a utilizar.', 50.0, 66),
 
-('A', 'Se han reconocido y analizado las tecnologías relacionadas con la inclusión de contenido multimedia e interactivo.', 20, 67),
-('B', 'Se han identificado las necesidades específicas de configuración de los navegadores web para soportar contenido multimedia e interactivo.', 20, 67),
-('C', 'Se han utilizado herramientas gráficas para el desarrollo de contenido multimedia interactivo.', 60, 67),
+('A', 'Se han reconocido y analizado las tecnologías relacionadas con la inclusión de contenido multimedia e interactivo.', 50.0, 67),
+('B', 'Se han identificado las necesidades específicas de configuración de los navegadores web para soportar contenido multimedia e interactivo.', 50.0, 67),
 
-('A', 'Se ha reconocido la necesidad de diseñar webs accesibles.', 20, 68),
-('B', 'Se ha analizado la accesibilidad de diferentes documentos web.', 20, 68),
-('C', 'Se han analizado los principios y pautas de accesibilidad al contenido, así como los niveles de conformidad.', 60, 68),
+('A', 'Se ha reconocido la necesidad de diseñar webs accesibles.', 50.0, 68),
+('B', 'Se ha analizado la accesibilidad de diferentes documentos web.', 50.0, 68),
 
-('A', 'Se ha analizado la usabilidad de diferentes documentos web.', 20, 69),
-('B', 'Se ha valorado la importancia del uso de estándares en la creación de documentos web.', 20, 69),
-('C', 'Se ha modificado el interfaz web para adecuarlo al objetivo que persigue y a los usuarios a los que va dirigido.', 60, 69),
+('A', 'Se ha analizado la usabilidad de diferentes documentos web.', 50.0, 69),
+('B', 'Se ha valorado la importancia del uso de estándares en la creación de documentos web.', 50.0, 69),
 
-('A', 'Se han analizado aspectos generales de arquitecturas web, sus características, ventajas e inconvenientes.', 20, 70),
-('B', 'Se han descrito los fundamentos y protocolos en los que se basa el funcionamiento de un servidor web.', 20, 70),
-('C', 'Se ha realizado la instalación y configuración básica de servidores web.', 60,70),
+('A', 'Se han analizado aspectos generales de arquitecturas web, sus características, ventajas e inconvenientes.', 50.0, 70),
+('B', 'Se han descrito los fundamentos y protocolos en los que se basa el funcionamiento de un servidor web.', 50.0, 70),
 
-('A', 'Se han reconocido los parámetros de administración más importantes del servidor web.', 20, 71),
-('B', 'Se ha ampliado la funcionalidad del servidor mediante la activación y configuración de módulos.', 20, 71),
-('C', 'Se han creado y configurado sitios virtuales.', 60, 71),
+('A', 'Se han reconocido los parámetros de administración más importantes del servidor web.', 50.0, 71),
+('B', 'Se ha ampliado la funcionalidad del servidor mediante la activación y configuración de módulos.', 50.0, 71),
 
-('A', 'Se han descrito los componentes y el funcionamiento de los servicios proporcionados por el servidor de aplicaciones.', 20, 72),
-('B', 'Se han identificado los principales archivos de configuración y de bibliotecas compartidas.', 20, 72),
-('C', 'Se ha configurado el servidor de aplicaciones para cooperar con el servidor web.', 60, 72),
+('A', 'Se han descrito los componentes y el funcionamiento de los servicios proporcionados por el servidor de aplicaciones.', 50.0, 72),
+('B', 'Se han identificado los principales archivos de configuración y de bibliotecas compartidas.', 50.0, 72),
 
-('A', 'Se han instalado y configurado servidores de transferencia de archivos.', 20, 73),
-('B', 'Se han creado usuarios y grupos para el acceso remoto al servidor.', 20, 73),
-('C', 'Se ha comprobado el acceso al servidor, tanto en modo activo como en modo pasivo.', 60, 73),
+('A', 'Se han instalado y configurado servidores de transferencia de archivos.', 50.0, 73),
+('B', 'Se han creado usuarios y grupos para el acceso remoto al servidor.', 50.0, 73),
 
-('A', 'Se ha descrito la estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos.', 20, 74),
-('B', 'Se han identificado las necesidades de configuración del servidor de nombres en función de los requerimientos de ejecución de las aplicaciones web desplegadas.', 20, 74),
-('C', 'Se han identificado la función, elementos y estructuras lógicas del servicio de directorio.', 60, 74),
+('A', 'Se ha descrito la estructura, nomenclatura y funcionalidad de los sistemas de nombres jerárquicos.', 50.0, 74),
+('B', 'Se han identificado las necesidades de configuración del servidor de nombres en función de los requerimientos de ejecución de las aplicaciones web desplegadas.', 50.0, 74),
 
-('A', 'Se han identificado diferentes herramientas de generación de documentación.', 20, 75),
-('B', 'Se han documentado los componentes software utilizando los generadores específicos de las plataformas.', 20, 75),
-('C', 'Se han utilizado diferentes formatos para la documentación.', 60, 75),
+('A', 'Se han identificado diferentes herramientas de generación de documentación.', 50.0, 75),
+('B', 'Se han documentado los componentes software utilizando los generadores específicos de las plataformas.', 50.0, 75),
 
 -- CE Programación multimedia y dispositivos móviles.
-('A', 'Se han analizado las limitaciones que plantea la ejecución de aplicaciones en los dispositivos móviles.', 20, 76),
-('B', 'Se han identificado las tecnologías de desarrollo de aplicaciones para dispositivos móviles.', 20, 76),
-('C', 'Se han instalado, configurado y utilizado entornos de trabajo para el desarrollo de aplicaciones para dispositivos móviles.', 60, 76),
+('A', 'Se han analizado las limitaciones que plantea la ejecución de aplicaciones en los dispositivos móviles.', 50.0, 76),
+('B', 'Se han identificado las tecnologías de desarrollo de aplicaciones para dispositivos móviles.', 50.0, 76),
 
-('A', 'Se ha generado la estructura de clases necesaria para la aplicación.', 20, 77),
-('B', 'Se han analizado y utilizado las clases que modelan ventanas, menús, alertas y controles para el desarrollo de aplicaciones gráficas sencillas.', 20, 77),
-('C', 'Se han utilizado las clases necesarias para la conexión y comunicación con dispositivos inalámbricos.', 60, 77),
+('A', 'Se ha generado la estructura de clases necesaria para la aplicación.', 50.0, 77),
+('B', 'Se han analizado y utilizado las clases que modelan ventanas, menús, alertas y controles para el desarrollo de aplicaciones gráficas sencillas.', 50.0, 77),
 
-('A', 'Se han analizado entornos de desarrollo multimedia.', 20, 78),
-('B', 'Se han reconocido las clases que permiten la captura, procesamiento y almacenamiento de datos multimedia.', 20, 78),
-('C', 'Se han utilizado clases para la conversión de datos multimedia de un formato a otro.', 60, 78),
+('A', 'Se han analizado entornos de desarrollo multimedia.', 50.0, 78),
+('B', 'Se han reconocido las clases que permiten la captura, procesamiento y almacenamiento de datos multimedia.', 50.0, 78),
 
-('A', 'Se han identificado los elementos que componen la arquitectura de un juego 2D y 3D.', 20, 79),
-('B', 'Se han analizado los componentes de un motor de juegos.', 20, 79),
-('C', 'Se han analizado entornos de desarrollo de juegos.', 60, 79),
+('A', 'Se han identificado los elementos que componen la arquitectura de un juego 2D y 3D.', 50.0, 79),
+('B', 'Se han analizado los componentes de un motor de juegos.', 50.0, 79),
 
-('A', 'Se ha establecido la lógica de un nuevo juego.', 20, 80),
-('B', 'Se han creado los objetos necesarios para el juego y definido sus características.', 20, 80),
-('C', 'Se han creado las escenas del juego y distribuido los objetos en las mismas.', 60, 80),
+('A', 'Se ha establecido la lógica de un nuevo juego.', 50.0, 80),
+('B', 'Se han creado los objetos necesarios para el juego y definido sus características.', 50.0, 80),
 
+-- CE proyecto de desarrollo de aplicaciones multiplataforma
+('A', 'Se han clasificado las empresas del sector por sus características organizativas y el tipo de producto o servicio que ofrecen.', 50.0, 81),
+('B', 'Se han caracterizado las empresas tipo indicando la estructura organizativa y las funciones de cada departamento.', 50.0, 81),
 
--- ce proyecto de desarrollo de aplicaciones multiplataforma
-('A', 'Se han clasificado las empresas del sector por sus características organizativas y el tipo de producto o servicio que ofrecen.', 20, 81),
-('B', 'Se han caracterizado las empresas tipo indicando la estructura organizativa y las funciones de cada departamento.', 20, 81),
-('C', 'Se han identificado las necesidades más demandadas a las empresas.', 60, 81),
+('A', 'Se ha recopilado información relativa a los aspectos que van a ser tratados en el proyecto.', 50.0, 82),
+('B', 'Se ha realizado el estudio de viabilidad técnica del proyecto.', 50.0, 82),
 
-('A', 'Se ha recopilado información relativa a los aspectos que van a ser tratados en el proyecto.', 20, 82),
-('B', 'Se ha realizado el estudio de viabilidad técnica del proyecto.', 20, 82),
-('C', 'Se han identificado las fases del proyecto especificando su contenido y plazos de ejecución.', 60, 82),
+('A', 'Se han secuenciado las tareas en función de las necesidades de implementación.', 50.0, 83),
+('B', 'Se han determinado los recursos y la logística necesaria para cada tarea.', 50.0, 83),
 
-('A', 'Se han secuenciado las tareas en función de las necesidades de implementación.', 20, 83),
-('B', 'Se han determinado los recursos y la logística necesaria para cada tarea.', 20, 83),
-('C', 'Se han identificado las necesidades de permisos y autorizaciones para llevar a cabo las tareas.', 60, 83),
+('A', 'Se ha definido el procedimiento de evaluación de las actividades o intervenciones realizadas durante la ejecución del proyecto.', 50.0, 84),
+('B', 'Se han definido los indicadores de calidad para realizar la evaluación del proyecto.', 50.0, 84),
 
-('A', 'Se ha definido el procedimiento de evaluación de las actividades o intervenciones realizadas durante la ejecución del proyecto.', 20, 84),
-('B', 'Se han definido los indicadores de calidad para realizar la evaluación del proyecto.', 20, 84),
-('C', 'Se ha definido el procedimiento para el registro y evaluación de las incidencias que puedan presentarse durante la ejecución del proyecto.', 60, 84),
+-- CE sistema de gestión empresarial
+('A', 'Se han reconocido los diferentes sistemas ERP-CRM que existen en el mercado.', 50.0, 85),
+('B', 'Se han identificado los diferentes tipos de licencia de los sistemas ERP-CRM.', 50.0, 85),
 
--- CE sistema de gestion empresarial
-('A', 'Se han reconocido los diferentes sistemas ERP-CRM que existen en el mercado.', 20, 85),
-('B', 'Se han identificado los diferentes tipos de licencia de los sistemas ERP-CRM.', 20, 85),
-('C', 'Se han comparado sistemas ERP-CRM en función de sus características y requisitos.', 60, 85),
+('A', 'Se han identificado los módulos que componen el ERP-CRM.', 50.0, 86),
+('B', 'Se han realizado diferentes tipos de instalaciones.', 50.0, 86),
 
-('A', 'Se han identificado los módulos que componen el ERP-CRM.', 20, 86),
-('B', 'Se han realizado diferentes tipos de instalaciones.', 20, 86),
-('C', 'Se han configurado los módulos instalados.', 60, 86),
+('A', 'Se han utilizado herramientas y lenguajes de consulta y manipulación de datos proporcionados por los sistemas ERP-CRM.', 50.0, 87),
+('B', 'Se han generado formularios.', 50.0, 87),
 
-('A', 'Se han utilizado herramientas y lenguajes de consulta y manipulación de datos proporcionados por los sistemas ERP-CRM.', 20, 87),
-('B', 'Se han generado formularios.', 20, 87),
-('C', 'Se han generado informes.', 60, 87),
+('A', 'Se han identificado las posibilidades de adaptación del ERP-CRM.', 50.0, 88),
+('B', 'Se han adaptado definiciones de campos, tablas y vistas de la base de datos del ERP-CRM.', 50.0, 88),
 
-('A', 'Se han identificado las posibilidades de adaptación del ERP-CRM.', 20, 88),
-('B', 'Se han adaptado definiciones de campos, tablas y vistas de la base de datos del ERP-CRM.', 20, 88),
-('C', 'Se han adaptado consultas.', 60, 88),
-
-('A', 'Se han reconocido las sentencias del lenguaje propio del sistema ERP-CRM.', 20, 89),
-('B', 'Se han utilizado los elementos de programación del lenguaje para crear componentes de manipulación de datos y extracción de información.', 20, 89),
-('C', 'Se han modificado componentes software para añadir nuevas funcionalidades al sistema.', 60, 89),
+('A', 'Se han reconocido las sentencias del lenguaje propio del sistema ERP-CRM.', 50.0, 89),
+('B', 'Se han utilizado los elementos de programación del lenguaje para crear componentes de manipulación de datos y extracción de información.', 50.0, 89),
 
 -- CE de Acceso a datos
-('A', 'Se han utilizado clases para la gestión de ficheros y directorios.', 20, 90),
-('B', 'Se han valorado las ventajas y los inconvenientes de las distintas formas de acceso.', 20, 90),
-('C', 'Se han utilizado clases para recuperar información almacenada en ficheros.', 60, 90),
+('A', 'Se han utilizado clases para la gestión de ficheros y directorios.', 50.0, 90),
+('B', 'Se han valorado las ventajas y los inconvenientes de las distintas formas de acceso.', 50.0, 90),
 
-('A', 'Se han valorado las ventajas e inconvenientes de utilizar conectores.', 20, 91),
-('B', 'Se han utilizado gestores de bases de datos embebidos e independientes.', 20, 91),
-('C', 'Se ha utilizado el conector idóneo en la aplicación.', 60, 91),
+('A', 'Se han valorado las ventajas e inconvenientes de utilizar conectores.', 50.0, 91),
+('B', 'Se han utilizado gestores de bases de datos embebidos e independientes.', 50.0, 91),
 
-('A', 'Se ha instalado la herramienta ORM.', 20, 92),
-('B', 'Se ha configurado la herramienta ORM.', 20, 92),
-('C', 'Se han definido configuraciones de mapeo.', 60, 92);
+('A', 'Se ha instalado la herramienta ORM.', 50.0, 92),
+('B', 'Se ha configurado la herramienta ORM.', 50.0, 92);
 
 
 INSERT INTO tarea (codigo, nombre, fecha) VALUES
@@ -756,67 +661,74 @@ INSERT INTO tarea (codigo, nombre, fecha) VALUES
 ('T026', 'Desarrollo del backend del proyecto', '2025-05-10'),
 ('T027', 'Presentación y documentación del proyecto', '2025-05-20');
 
-
 DELIMITER $$
-
-CREATE PROCEDURE carga_evaluaciones()
-BEGIN 
-    DECLARE nota DECIMAL(4,2) DEFAULT 0.0;
+create procedure carga_evaluaciones()
+begin 
+	declare nota decimal(4,2) default 0.0;
     DECLARE fecha_random DATE;
-
-    DECLARE fin BOOLEAN DEFAULT FALSE;
-
-    DECLARE al_dni char(9);
-    DECLARE tar_cod char(6);
-    DECLARE ce_id INT;
-
-    DECLARE al_cur CURSOR FOR SELECT dni_alumno FROM alumno;
-    DECLARE tar_cur CURSOR FOR SELECT codigo FROM tarea;
-    DECLARE ce_cur CURSOR FOR SELECT id FROM criterio_evalua;
-
-    DECLARE CONTINUE HANDLER FOR NOT FOUND SET fin = TRUE;
-
-    OPEN al_cur;
-
+    declare al_fin boolean default false;
+    declare al_dni char(9);
+    declare al_cur cursor for select dni_alumno from alumno;
+    declare continue handler for not found  set al_fin = true;
+    
+    open al_cur;
     recorre_al: LOOP
-        FETCH al_cur INTO al_dni;
-        IF fin THEN LEAVE recorre_al; END IF;
-
-        OPEN tar_cur;
-
-        recorre_tar: LOOP
-            FETCH tar_cur INTO tar_cod;
-            IF fin THEN LEAVE recorre_tar; END IF;
-
-            OPEN ce_cur;
-
-            recorre_ce: LOOP
-                FETCH ce_cur INTO ce_id;
-                IF fin THEN LEAVE recorre_ce; END IF;
-
-                SET nota = ROUND(RAND() * 10, 2);
-                SET fecha_random = DATE_ADD('2025-01-01', INTERVAL FLOOR(RAND() * 365) DAY);
-
-                INSERT INTO evaluacion (fecha, nota, alumno, tarea, criterio)
-                VALUES (fecha_random, nota, al_dni, tar_cod, ce_id);
-            END LOOP;
-
-            CLOSE ce_cur;
-        END LOOP;
-
-        CLOSE tar_cur;
+		fetch al_cur into al_dni;
+            
+        IF al_fin = true then
+			leave recorre_al;
+        END IF;
+        
+		BEGIN
+			declare tar_fin boolean default false;
+			declare tar_cod char(6);
+			declare tar_cur cursor for select codigo from tarea;
+			declare continue handler for not found  set tar_fin = true;
+            
+            open tar_cur;
+            recorre_tar: LOOP
+				fetch tar_cur into tar_cod;
+            
+				IF tar_fin = true then
+					leave recorre_tar;
+				END IF;
+            
+				BEGIN
+					declare ce_fin boolean default false;
+					declare ce_id int;
+					declare ce_cur cursor for select id from criterio_evalua;
+					declare continue handler for not found  set ce_fin = true;
+					
+					open ce_cur;
+					recorre_ce: LOOP
+						fetch ce_cur into ce_id;
+						IF ce_fin = true then
+							leave recorre_ce;
+						END IF;
+		
+						set nota = ROUND(RAND()*10,2);
+                        SET fecha_random = DATE_ADD('2025-01-01', INTERVAL FLOOR(RAND() * 365) DAY);
+						INSERT INTO evaluacion (fecha, nota, alumno, tarea, criterio) VALUES (fecha_random, nota, al_dni, tar_cod, ce_id);
+					END LOOP;
+					close ce_cur;
+				END;
+			END LOOP;
+            close tar_cur;
+		END;
     END LOOP;
-
-    CLOSE al_cur;
-
-END$$
+    close al_cur;
+    
+end$$
 
 DELIMITER ;
 
 call carga_evaluaciones();
 
-select * from evaluacion;
 
+
+select * 
+from evaluacion
+where alumno;
 
 
 INSERT INTO instrumento_evaluacion (codigo, descripcion, tipo, tarea) VALUES

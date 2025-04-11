@@ -1,127 +1,108 @@
-use SENECA;
--- 1 Nota media del RA1 de la asignatura 
--- “Bases de datos” por cada alumno. (FUNCIONA pero solo muestra un alumno)
-SELECT a.dni_alumno, p.nombre, p.apellidos, AVG(e.nota) AS nota_media_ra1
-FROM evaluacion e
-    JOIN alumno a ON e.alumno = a.dni_alumno
-    JOIN persona p ON a.dni_alumno = p.dni
-    JOIN criterio_evalua ce ON e.criterio = ce.id
-    JOIN ra r ON ce.ra = r.id
-    JOIN modulo_prof mp ON r.mod_prof = mp.id
-WHERE r.codigo = 'RA001'
-  AND mp.nombre = 'Bases de datos'
-GROUP BY a.dni_alumno;
+use seneca;
 
+-- 1 nota media del ra1 de la asignatura 
+-- “Bases de datos” por cada alumno. (funciona pero solo muestra un alumno)
+select a.dni_alumno, p.nombre, p.apellidos, avg(e.nota) as nota_media_ra1
+from evaluacion e
+    join alumno a on e.alumno = a.dni_alumno
+    join persona p on a.dni_alumno = p.dni
+    join criterio_evalua ce on e.criterio = ce.id
+    join ra r on ce.ra = r.id
+    join modulo_prof mp on r.mod_prof = mp.id
+where r.codigo = 'RA001'
+  and mp.nombre = 'Bases de datos'
+group by a.dni_alumno;
 
--- 2. Nombre y apellidos del alumno que ha obtenido mayor nota en cualquier criterio de
--- evaluación de cualquier módulo profesional (o asignatura) (FUNCIONA!)
+-- 2. nombre y apellidos del alumno que ha obtenido mayor nota en cualquier criterio de
+-- evaluación de cualquier módulo profesional (o asignatura) (funciona!)
+select p.nombre, p.apellidos
+from evaluacion e
+    join alumno a on e.alumno = a.dni_alumno
+    join persona p on a.dni_alumno = p.dni
+where e.nota = (
+	select max(nota) 
+    from evaluacion
+	)
+limit 1;
 
-SELECT p.nombre, p.apellidos
-FROM evaluacion e
-    JOIN alumno a ON e.alumno = a.dni_alumno
-    JOIN persona p ON a.dni_alumno = p.dni
-WHERE e.nota = (SELECT MAX(nota) FROM evaluacion)
-LIMIT 1;
+-- 3. nota media de una asignatura cualquiera (creo q funciona)
+select mp.nombre as asignatura, round(avg(e.nota), 2) as nota_media
+from evaluacion e
+	join tarea t on e.tarea = t.codigo
+	join criterio_evalua ce on e.criterio = ce.id
+	join ra r on ce.ra = r.id
+	join modulo_prof mp on r.mod_prof = mp.id
+group by mp.nombre;
 
+-- 4. nota media de expediente académico para cada alumno (funciona!)
+select p.nombre, p.apellidos, avg(e.nota) as nota_media
+from evaluacion e
+	join alumno a on e.alumno = a.dni_alumno
+	join persona p on a.dni_alumno = p.dni
+group by p.nombre, p.apellidos;
 
--- 3. Nota media de una asignatura cualquiera (CREO q funciona)
-
-SELECT 
-    mp.nombre AS asignatura,
-    ROUND(AVG(e.nota), 2) AS nota_media
-FROM evaluacion e
-JOIN tarea t ON e.tarea = t.codigo  -- Relacionamos la evaluación con la tarea
-JOIN criterio_evalua ce ON e.criterio = ce.id  -- Relacionamos la evaluación con el criterio
-JOIN ra r ON ce.ra = r.id  -- Relacionamos el criterio con el RA
-JOIN modulo_prof mp ON r.mod_prof = mp.id  -- Relacionamos el RA con el módulo profesional
-GROUP BY mp.nombre;  -- Agrupamos por módulo profesional (asignatura)
-
-
-
--- 4. Nota media de expediente académico para cada alumno (FUNCIONA!)
-SELECT 
-    p.nombre, 
-    p.apellidos, 
-    AVG(e.nota) AS nota_media
-FROM evaluacion e
-JOIN alumno a ON e.alumno = a.dni_alumno
-JOIN persona p ON a.dni_alumno = p.dni
-GROUP BY p.nombre, p.apellidos;
-
--- 5. Muestra el/los RA con mayor número de criterios (FUNCIONA?!)
-
-SELECT 
-    ra.codigo, 
-    ra.descripcion, 
-    COUNT(ce.codigo) AS num_criterios
-FROM ra
-JOIN criterio_evalua ce ON ra.id = ce.ra
-GROUP BY ra.codigo, ra.descripcion
-HAVING COUNT(ce.codigo) = (
-    SELECT MAX(num_criterios)
-    FROM (
-        SELECT COUNT(*) AS num_criterios
-        FROM criterio_evalua
-        GROUP BY ra
-    ) AS subconsulta
+-- 5. muestra el/los ra con mayor número de criterios (funciona?!)
+select ra.codigo, ra.descripcion, count(ce.codigo) as num_criterios
+from ra
+	join criterio_evalua ce on ra.id = ce.ra
+group by ra.codigo, ra.descripcion
+having count(ce.codigo) = (
+    select max(num_criterios)
+    from (
+        select count(*) as num_criterios
+        from criterio_evalua
+        group by ra
+    ) as subconsulta
 );
 
+-- 6. para el alumno con el primer dni (12121212K) muestra la nota final por cada módulo profesional 
+-- (funciona!)
+select mp.nombre as modulo, round(avg(sub.nota_ra), 2) as nota_final
+from (
+    select ra.codigo, ra.mod_prof, avg(e.nota) as nota_ra
+    from evaluacion e
+		join criterio_evalua ce on e.criterio = ce.id
+		join ra on ce.ra = ra.id
+    where e.alumno = '12121212K'
+    group by ra.codigo, ra.mod_prof
+) as sub
+	join modulo_prof mp on sub.mod_prof = mp.id
+group by mp.nombre;
 
+-- 7. muestra todos los ra suspensos para cada alumno. el listado debe incluir nombre
+-- completo del alumno, nombre del módulo y descripción del ra
+-- (funciona! pero solo hay 1 alumno)
+select p.nombre, p.apellidos, mp.nombre as nombre_modulo, ra.descripcion as descripcion_ra, e.nota
+from evaluacion e
+	join alumno a on e.alumno = a.dni_alumno
+	join persona p on a.dni_alumno = p.dni
+	join criterio_evalua ce on e.criterio = ce.id
+	join ra on ce.ra = ra.id
+	join modulo_prof mp on ra.mod_prof = mp.id
+where e.nota < 5;
 
--- 6.Para el alumno con el primer dni (12121212K) muestra la nota final por cada módulo profesional 
--- (FUNCIONA!)
+-- 8 muestra el nombre del profesor que tiene la asignatura con mayor número de 
+-- suspensos (funciona!)
+select per.nombre as nombre_profesor, per.apellidos as apellidos_profesor, mp.nombre as asignatura, count(e.id) as total_suspensos
+from evaluacion e
+	join criterio_evalua ce on e.criterio = ce.id
+	join ra on ce.ra = ra.id
+	join modulo_prof mp on ra.mod_prof = mp.id
+	join profesor pr on mp.profesor = pr.dni_profesor
+	join persona per on pr.dni_profesor = per.dni
+where e.nota < 5
+group by mp.id
+order by total_suspensos desc
+limit 1;
 
-SELECT 
-    mp.nombre AS modulo,
-    ROUND(AVG(sub.nota_ra), 2) AS nota_final
-FROM (
-    SELECT 
-        ra.codigo AS ra_codigo,
-        ra.mod_prof,
-        AVG(e.nota) AS nota_ra
-    FROM evaluacion e
-    JOIN criterio_evalua ce ON e.criterio = ce.id
-    JOIN ra ON ce.ra = ra.id
-    WHERE e.alumno = '12121212K'
-    GROUP BY ra.codigo, ra.mod_prof
-) AS sub
-JOIN modulo_prof mp ON sub.mod_prof = mp.id
-GROUP BY mp.nombre;
-
-
-
-
- -- 7. Muestra todos los RA suspensos para cada alumno. El listado debe incluir nombre
--- completo del alumno, nombre del módulo y descripción del RA
--- (FUNCIONA!?)
-SELECT 
-    p.nombre,
-    p.apellidos,
-    mp.nombre AS nombre_modulo,
-    ra.descripcion AS descripcion_ra,
-    e.nota
-FROM evaluacion e
-JOIN alumno a ON e.alumno = a.dni_alumno
-JOIN persona p ON a.dni_alumno = p.dni
-JOIN criterio_evalua ce ON e.criterio = ce.id
-JOIN ra ON ce.ra = ra.id
-JOIN modulo_prof mp ON ra.mod_prof = mp.id
-WHERE e.nota < 5;
-
-
--- 8 Muestra el nombre del profesor que tiene la asignatura con mayor número de 
--- suspensos 
-
-
-
-
--- 9 Muestra los alumnos matriculados en el IES Los Alcores (FUNCIONA!)
+-- 9 muestra los alumnos matriculados en el ies los alcores (funciona!)
 select a.dni_alumno, p.nombre, p.apellidos, m.fecha, c.centro
 from matricula m
-	join alumno a on m.alumno = a.dni_alumno
-	join persona p on a.dni_alumno = p.dni
-	join curso c on m.curso = c.id
+    join alumno a on m.alumno = a.dni_alumno
+    join persona p on a.dni_alumno = p.dni
+    join curso c on m.curso = c.id
 where c.centro = 'IES Los Alcores';
+
 
 
 

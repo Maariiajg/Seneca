@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS SENECA;
-CREATE DATABASE SENECA;
-USE SENECA;
+drop database if exists SENECA;
+create database SENECA;
+use SENECA;
 
 create table persona (
 	dni char(9) primary key,
